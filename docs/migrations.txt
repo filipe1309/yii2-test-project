@@ -1,0 +1,3 @@
+php yii migrate/history #(criou tabela migration)
+php yii migrate/create create_tests_table #(criou migrations/m161025_012145_create_tests_table.php)
+php yii migrate/to m161025_012145 #(criou tabela tests)
