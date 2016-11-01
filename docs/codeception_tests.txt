@@ -1,0 +1,11 @@
+# setup
+composer global require "codeception/codeception=2.1.*"
+composer global require "codeception/specify=*"
+composer global require "codeception/verify=*"
+
+# rodar testes 
+composer exec codecept run
+
+# fontes
+# http://codeception.com/for/yii
+# http://codeception.com/docs/modules/Yii2
