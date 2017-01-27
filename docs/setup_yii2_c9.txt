@@ -1,6 +1,72 @@
-composer global require "fxp/composer-asset-plugin:^1.2.0"
-composer create-project --prefer-dist yiisoft/yii2-app-basic basic
-cd basic/
-php requirements.php
-mysql-ctl cli #(create database yii2basic)
-phpmyadmin-ctl install
+## Setup Yii2 Basic template
+    composer global require "fxp/composer-asset-plugin:^1.2.0"
+    composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+    cd basic/
+    php requirements.php
+    mysql-ctl cli #(create database yii2basic)
+    phpmyadmin-ctl install
+
+## Pretty URL
+    https://yii2-cookbook.readthedocs.io/enable-pretty-urls/
+    config/web.php:
+        'components' => [
+            // ...
+            'urlManager' => [
+                'class' => 'yii\web\UrlManager',
+                // Hide index.php
+                'showScriptName' => false,
+                // Use pretty URLs
+                'enablePrettyUrl' => true,
+                'rules' => [
+                       '<alias:\w+>' => 'site/<alias>',
+                        '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                        '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                        '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                ],
+            ],
+            // ...
+        ],
+        ...
+    
+    web/.htaccess:
+        RewriteEngine on
+        # If a directory or a file exists, use it directly
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        # Otherwise forward it to index.php
+        RewriteRule . index.php
+        
+        ## obs: if /web will be not removed from url
+        ## put .htaccess on root and
+        ## change RewriteRule . index.php to RewriteRule . web/index.php
+
+
+
+## Remove /web from URL
+    http://stackoverflow.com/questions/29885970/how-to-remove-url-web-index-php-yii-2-and-set-route-with-parameter-with-clean
+    ## Set .htaccess on web folder (above)
+    ## Set .htaccess on root folder (below)
+    .htaccess:
+        # prevent directory listings
+        Options -Indexes
+        IndexIgnore */*
+        
+        # follow symbolic links
+        Options FollowSymlinks
+        RewriteEngine on
+        RewriteRule ^(.+)?$ web/$1 ## for basic template
+        ## for advanced template
+        ## RewriteRule ^admin(/.+)?$ backend/web/$1 [L,PT] 
+        ## RewriteRule ^(.+)?$ frontend/web/$1
+
+    web/config.php:
+    # or frontend/config/main.php in advance template
+        use \yii\web\Request;
+        $baseUrl = str_replace('/frontend/web', '', (new Request)->getBaseUrl());
+        'components' => [
+            'request' => [
+                'baseUrl' => $baseUrl,
+            ],
+        ],
+
+

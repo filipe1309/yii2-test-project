@@ -3,6 +3,14 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+// The message
+/*$message = "Line 1\nLine 2\nLine 3";
+
+// In case any of our lines are larger than 70 characters, we should use wordwrap()
+$message = wordwrap($message, 70);
+
+// Send
+mail('filipe1309d@gmail.com', 'My Subject', $message);*/
 ?>
 <div class="site-index">
 
@@ -48,6 +56,31 @@ $this->title = 'My Yii Application';
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
             </div>
         </div>
-
+<?php       
+        use webvimark\modules\UserManagement\components\GhostMenu;
+        use webvimark\modules\UserManagement\UserManagementModule;
+        
+        echo GhostMenu::widget([
+            'encodeLabels'=>false,
+            'activateParents'=>true,
+            'items' => [
+                [
+                    'label' => 'Backend routes',
+                    'items'=>UserManagementModule::menuItems()
+                ],
+                [
+                    'label' => 'Frontend routes',
+                    'items'=>[
+                        ['label'=>'Login', 'url'=>['/user-management/auth/login']],
+                        ['label'=>'Logout', 'url'=>['/user-management/auth/logout']],
+                        ['label'=>'Registration', 'url'=>['/user-management/auth/registration']],
+                        ['label'=>'Change own password', 'url'=>['/user-management/auth/change-own-password']],
+                        ['label'=>'Password recovery', 'url'=>['/user-management/auth/password-recovery']],
+                        ['label'=>'E-mail confirmation', 'url'=>['/user-management/auth/confirm-email']],
+                    ],
+                ],
+            ],
+        ]);
+?>
     </div>
 </div>

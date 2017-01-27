@@ -11,10 +11,33 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $freeAccessActions = ['index']; //['logout', 'about'];
+    //Add routes to permissions, permissions to roles and roles to users =)
+    
+    public function behaviors()
+    {
+        return [
+             /*'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['logout', 'about'],
+                'rules' => [
+                    [
+                        'actions' => ['logout', 'about'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],*/
+            'ghost-access'=> [
+                'class' => 'webvimark\modules\UserManagement\components\GhostAccessControl',
+            ],
+        ];
+    }
+    
     /**
      * @inheritdoc
      */
-    public function behaviors()
+    /*public function behaviors()
     {
         return [
             'access' => [
@@ -35,7 +58,7 @@ class SiteController extends Controller
                 ],
             ],
         ];
-    }
+    }*/
 
     /**
      * @inheritdoc

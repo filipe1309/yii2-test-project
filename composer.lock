@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c7937831cbd10e9bba4e9af08128900a",
-    "content-hash": "5438861ad666f7367e7d9ae0e539b7d0",
+    "hash": "fa027086c8ce4df4d58e8e588864d1ae",
+    "content-hash": "6ce236db6e10646966aeeefbe37f57da",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -196,6 +196,48 @@
             ]
         },
         {
+            "name": "bryglen/yii2-sendgrid",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bryglen/yii2-sendgrid.git",
+                "reference": "3836996332da9dda36d07d8f5b3a805c65aae0a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bryglen/yii2-sendgrid/zipball/3836996332da9dda36d07d8f5b3a805c65aae0a5",
+                "reference": "3836996332da9dda36d07d8f5b3a805c65aae0a5",
+                "shasum": ""
+            },
+            "require": {
+                "sendgrid/sendgrid": "2.2.1"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "bryglen\\sendgrid\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Jayson Tan",
+                    "email": "bryantan16@gmail.com"
+                }
+            ],
+            "description": "Sendgrid Mailer for Yii 2",
+            "keywords": [
+                "bryglen",
+                "extension",
+                "sendgrid",
+                "yii2"
+            ],
+            "time": "2015-04-16 16:00:43"
+        },
+        {
             "name": "cebe/markdown",
             "version": "1.1.1",
             "source": {
@@ -300,6 +342,147 @@
             "time": "2016-07-16 12:58:58"
         },
         {
+            "name": "ikimea/browser",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ikimea/Browser.git",
+                "reference": "3fb8a2498ed36d49832d95f1da0c4cc055a64728"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ikimea/Browser/zipball/3fb8a2498ed36d49832d95f1da0c4cc055a64728",
+                "reference": "3fb8a2498ed36d49832d95f1da0c4cc055a64728",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ikimea\\Browser\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ikimea",
+                    "homepage": "http://www.ikimea.com"
+                },
+                {
+                    "name": "Gary White",
+                    "homepage": "http://www.apptools.com/phptools/browser/"
+                },
+                {
+                    "name": "Chris Schuld",
+                    "homepage": "http://chrisschuld.com"
+                }
+            ],
+            "description": "Detecting the user’s browser",
+            "homepage": "http://www.ikimea.com",
+            "keywords": [
+                "browser"
+            ],
+            "time": "2015-08-26 20:05:14"
+        },
+        {
+            "name": "sendgrid/sendgrid",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sendgrid/sendgrid-php.git",
+                "reference": "83cec4aa7a86064c8ea30cc7180b1b558b0ac7e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/sendgrid-php/zipball/83cec4aa7a86064c8ea30cc7180b1b558b0ac7e9",
+                "reference": "83cec4aa7a86064c8ea30cc7180b1b558b0ac7e9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "sendgrid/smtpapi": "0.*"
+            },
+            "replace": {
+                "sendgrid/sendgrid-php": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "vlucas/phpdotenv": "1.0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SendGrid": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "This library allows you to quickly and easily send emails through SendGrid using PHP.",
+            "homepage": "http://github.com/sendgrid/sendgrid-php",
+            "keywords": [
+                "email",
+                "grid",
+                "send",
+                "sendgrid"
+            ],
+            "time": "2015-01-29 22:34:03"
+        },
+        {
+            "name": "sendgrid/smtpapi",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sendgrid/smtpapi-php.git",
+                "reference": "05ccf57bad5d1524e479b6dc0a2dfade88b3fbe5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/smtpapi-php/zipball/05ccf57bad5d1524e479b6dc0a2dfade88b3fbe5",
+                "reference": "05ccf57bad5d1524e479b6dc0a2dfade88b3fbe5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "replace": {
+                "sendgrid/smtpapi-php": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Smtpapi": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Build SendGrid X-SMTPAPI headers in PHP.",
+            "homepage": "http://github.com/sendgrid/smtpapi-php",
+            "keywords": [
+                "X-SMTP",
+                "api",
+                "email",
+                "grid",
+                "send",
+                "sendgrid",
+                "smtp",
+                "smtpapi",
+                "xsmtp"
+            ],
+            "time": "2015-04-14 02:37:45"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.3",
             "source": {
@@ -351,6 +534,268 @@
                 "mailer"
             ],
             "time": "2016-07-08 11:51:25"
+        },
+        {
+            "name": "webvimark/bootstrap-switch",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/bootstrap-switch.git",
+                "reference": "c7493ba37747a83951cd95acf876668cbc0aba7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/bootstrap-switch/zipball/c7493ba37747a83951cd95acf876668cbc0aba7f",
+                "reference": "c7493ba37747a83951cd95acf876668cbc0aba7f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\extensions\\BootstrapSwitch\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "BootstrapSwitch extension for yii 2",
+            "time": "2014-06-23 10:35:32"
+        },
+        {
+            "name": "webvimark/ckeditor",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/ckeditor.git",
+                "reference": "4801bb7ca94b2a08f229eaf82c214b2d5a2b41a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/ckeditor/zipball/4801bb7ca94b2a08f229eaf82c214b2d5a2b41a1",
+                "reference": "4801bb7ca94b2a08f229eaf82c214b2d5a2b41a1",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\extensions\\ckeditor\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Ckeditor with file browser for Yii 2",
+            "time": "2015-05-29 13:10:24"
+        },
+        {
+            "name": "webvimark/components",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/components.git",
+                "reference": "805b7ecfaea1654a8c0f47bc007497c97bdc9613"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/components/zipball/805b7ecfaea1654a8c0f47bc007497c97bdc9613",
+                "reference": "805b7ecfaea1654a8c0f47bc007497c97bdc9613",
+                "shasum": ""
+            },
+            "require": {
+                "webvimark/helpers": "^1.0.0",
+                "webvimark/image": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\components\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Components for yii 2",
+            "time": "2016-06-28 09:29:18"
+        },
+        {
+            "name": "webvimark/date-range-picker",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/date-range-picker.git",
+                "reference": "8bf4129db69b3dccd79987693fae87f5c086faef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/date-range-picker/zipball/8bf4129db69b3dccd79987693fae87f5c086faef",
+                "reference": "8bf4129db69b3dccd79987693fae87f5c086faef",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\extensions\\DateRangePicker\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "dangrossman daterangepicker yii 2 gridview",
+            "time": "2016-10-13 16:08:04"
+        },
+        {
+            "name": "webvimark/generators",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/generators.git",
+                "reference": "717ca40a3226db4d76f1839ce4cd2607b7001faf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/generators/zipball/717ca40a3226db4d76f1839ce4cd2607b7001faf",
+                "reference": "717ca40a3226db4d76f1839ce4cd2607b7001faf",
+                "shasum": ""
+            },
+            "require": {
+                "webvimark/bootstrap-switch": "^1.0.0",
+                "webvimark/ckeditor": "^1.0.0",
+                "webvimark/components": "^1.0.0",
+                "webvimark/date-range-picker": "^1.0.0",
+                "webvimark/grid-bulk-actions": "^1.0.0",
+                "webvimark/grid-page-size": "^1.0.0",
+                "webvimark/helpers": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\generators\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Generators for yii 2",
+            "time": "2016-07-19 11:59:29"
+        },
+        {
+            "name": "webvimark/grid-bulk-actions",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/grid-bulk-actions.git",
+                "reference": "c15cc98cc926a4ec0537a08d12ed25208c024440"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/grid-bulk-actions/zipball/c15cc98cc926a4ec0537a08d12ed25208c024440",
+                "reference": "c15cc98cc926a4ec0537a08d12ed25208c024440",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\extensions\\GridBulkActions\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Bulk actions extension for yii 2 gridview",
+            "time": "2016-10-25 06:25:33"
+        },
+        {
+            "name": "webvimark/grid-page-size",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/grid-page-size.git",
+                "reference": "cb0163614e34ebb0319ef436da6db755f30546d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/grid-page-size/zipball/cb0163614e34ebb0319ef436da6db755f30546d2",
+                "reference": "cb0163614e34ebb0319ef436da6db755f30546d2",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\extensions\\GridPageSize\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Grid page size extension for yii 2 gridview",
+            "time": "2016-10-25 06:28:39"
+        },
+        {
+            "name": "webvimark/helpers",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/helpers.git",
+                "reference": "7bb59438d50149cec8233f3b509dd686200ea567"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/helpers/zipball/7bb59438d50149cec8233f3b509dd686200ea567",
+                "reference": "7bb59438d50149cec8233f3b509dd686200ea567",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\helpers\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Helpers for yii 2",
+            "time": "2016-10-03 08:50:29"
+        },
+        {
+            "name": "webvimark/image",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/image.git",
+                "reference": "18a3f257b55d0670086b4ccdac005fe376ad7c21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/image/zipball/18a3f257b55d0670086b4ccdac005fe376ad7c21",
+                "reference": "18a3f257b55d0670086b4ccdac005fe376ad7c21",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\image\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Kohana image lib wrapper for yii 2",
+            "time": "2014-07-02 07:33:43"
+        },
+        {
+            "name": "webvimark/module-user-management",
+            "version": "1.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webvimark/user-management.git",
+                "reference": "48adb6cc53fc0a7da34dbf31bba47a0ef8d35cd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webvimark/user-management/zipball/48adb6cc53fc0a7da34dbf31bba47a0ef8d35cd8",
+                "reference": "48adb6cc53fc0a7da34dbf31bba47a0ef8d35cd8",
+                "shasum": ""
+            },
+            "require": {
+                "ikimea/browser": "1.12.0",
+                "webvimark/bootstrap-switch": "^1.0.0",
+                "webvimark/components": "^1.0.0",
+                "webvimark/date-range-picker": "^1.0.0",
+                "webvimark/grid-bulk-actions": "^1.0.0",
+                "webvimark/grid-page-size": "^1.0.0",
+                "webvimark/helpers": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webvimark\\modules\\UserManagement\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "User with improved RBAC",
+            "time": "2016-10-14 10:53:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -542,6 +987,54 @@
                 "yii2"
             ],
             "time": "2016-02-06 00:49:24"
+        },
+        {
+            "name": "yiisoft/yii2-mongodb",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-mongodb.git",
+                "reference": "4c809b59d640d083fcb39431e3087780fdb4f895"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-mongodb/zipball/4c809b59d640d083fcb39431e3087780fdb4f895",
+                "reference": "4c809b59d640d083fcb39431e3087780fdb4f895",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mongodb": ">=1.0.0",
+                "yiisoft/yii2": "~2.0.5"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\mongodb\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "MongoDb extension for the Yii framework",
+            "keywords": [
+                "active-record",
+                "mongo",
+                "mongodb",
+                "yii2"
+            ],
+            "time": "2016-10-31 11:04:20"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
