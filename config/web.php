@@ -174,7 +174,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         'allowedIPs' => ['127.0.0.1','::1', $_SERVER['REMOTE_ADDR'] ],
-        'generators' => [
+        /*'generators' => [
                 'mongoDbModel' => [
                     'class' => 'yii\mongodb\gii\model\Generator'
                 ],
@@ -182,7 +182,7 @@ if (YII_ENV_DEV) {
                 'n-crud'      => 'webvimark\generators\crud\Generator',
                 'n-module'    => 'webvimark\generators\module\Generator',
                 'n-extension' => 'webvimark\generators\extension\Generator',
-        ],
+        ],*/
     ];
 }
 
