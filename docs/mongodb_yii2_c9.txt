@@ -1,0 +1,18 @@
+sudo apt-get install -y mongodb-org
+mongod --bind_ip=$IP --nojournal
+
+or
+
+$ mkdir data
+$ echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+$ chmod a+x mongod
+$ ./mongod
+
+https://community.c9.io/t/setting-up-mongodb/1717
+https://docs.c9.io/docs/setup-a-database
+
+sudo pecl install mongodb
+php.ini >> extension=mongodb.so
+composer require --prefer-dist yiisoft/yii2-mongodb
+
+https://github.com/yiisoft/yii2-mongodb
