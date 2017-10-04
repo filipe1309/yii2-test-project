@@ -12,7 +12,15 @@ https://community.c9.io/t/setting-up-mongodb/1717
 https://docs.c9.io/docs/setup-a-database
 
 sudo pecl install mongodb
-php.ini >> extension=mongodb.so
+php.ini (cli e default) >> extension=mongodb.so
 composer require --prefer-dist yiisoft/yii2-mongodb
 
 https://github.com/yiisoft/yii2-mongodb
+
+config/web.php:
+'components' => [
+    'mongodb' => [
+        'class' => '\yii\mongodb\Connection',
+        'dsn' => 'mongodb://developer:password@localhost:27017/mydatabase',
+    ],
+],

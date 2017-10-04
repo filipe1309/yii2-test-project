@@ -1,4 +1,7 @@
-## Setup Yii2 Basic template
+## 
+Setup Yii2 Basic template
+    curl -sS https://getcomposer.org/installer | php
+    mv composer.phar /usr/local/bin/composer
     composer global require "fxp/composer-asset-plugin:^1.2.0"
     composer create-project --prefer-dist yiisoft/yii2-app-basic basic
     cd basic/
@@ -70,3 +73,5 @@
         ],
 
 
+# phpbrew
+https://community.c9.io/t/phpbrew-on-php-workspaces/621/3
