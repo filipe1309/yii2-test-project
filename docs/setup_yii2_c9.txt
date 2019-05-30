@@ -5,7 +5,7 @@ Setup Yii2 Basic template
     composer global require "fxp/composer-asset-plugin:^1.2.0"
     composer create-project --prefer-dist yiisoft/yii2-app-basic basic
     cd basic/
-    php requirements.php
+    php requirements.php    
     mysql-ctl cli #(create database yii2basic)
     phpmyadmin-ctl install
 
